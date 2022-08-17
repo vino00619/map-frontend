@@ -11,7 +11,11 @@ import axios from "axios";
 import { format } from "timeago.js";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import { API_URL } from "./globalConstant";
+import { API_URL } from "./globalConstant.js";
+import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
+import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
+
+mapboxgl.workerClass = MapboxWorker;
 // function App() {
 //   const [viewport, setViewport] = useState({
 //     width:400,
