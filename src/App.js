@@ -11,7 +11,7 @@ import axios from "axios";
 import { format } from "timeago.js";
 import Register from "./components/Register";
 import Login from "./components/Login";
-
+import { API_URL } from "./globalConstant";
 // function App() {
 //   const [viewport, setViewport] = useState({
 //     width:400,
@@ -51,12 +51,13 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/pins");
+        const res = await axios.get(`${API_URL}/api/pins`);
+        // const res = await axios.get("http://localhost:8800/api/pins");
         // console.log(res.data);
         setPins(res.data);
         // console.log(res.data);
         console.log("res data:", res.data);
-        const arr_star = res.data.map((data) => data.rating);
+        //const arr_star = res.data.map((data) => data.rating);
         // console.log("b:", arr_star);
       } catch (err) {
         console.log(err);
