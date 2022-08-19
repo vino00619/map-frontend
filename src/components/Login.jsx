@@ -3,7 +3,7 @@ import RoomIcon from "@mui/icons-material/Room";
 import { useState, useRef } from "react";
 import axios from "axios";
 import CancelIcon from '@mui/icons-material/Cancel';
-import { API_URL } from "./globalConstant.js";
+import { API_URL } from "../globalConstant";
 //asdf
 
 
