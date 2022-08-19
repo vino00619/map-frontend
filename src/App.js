@@ -77,7 +77,7 @@ function App() {
     // console.log("lat:" + lat, "long:" + long);
     // console.log(viewState);
     setCurrentPlaceId(id);
-    // setViewState({ ...viewState, latitude: lat, longitude: long });
+    setViewState({ ...viewState, latitude: lat, longitude: long });
     mapRef.current?.flyTo({ center: [long, lat], duration: 2000 });
   };
 
