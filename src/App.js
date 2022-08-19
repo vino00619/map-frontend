@@ -42,7 +42,7 @@ function App() {
   const [newPlace, setNewPlace] = useState(null);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [title, setTitle] = useState(null);
-  const [Desc, setDesc] = useState(null);
+  const [desc, setDesc] = useState(null);
   const [rating, setRating] = useState(0);
   const[showRegister, setShowRegister] = useState(false);
   const[showLogin, setShowLogin] = useState(false);
@@ -104,7 +104,7 @@ function App() {
     const newPin = {
       username: currentUser,
       title,
-      Desc,
+      desc,
       rating,
       lat: newPlace.lat,
       long: newPlace.lng,
