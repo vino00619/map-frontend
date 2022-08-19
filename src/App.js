@@ -52,6 +52,7 @@ function App() {
     zoom: 4,
   });
 
+  //comment
   useEffect(() => {
     const getPins = async () => {
       try {
