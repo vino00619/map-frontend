@@ -116,7 +116,7 @@ function App() {
       const res = await axios.post(`${API_URL}/api/pins`, newPin);
       setPins([...pins, res.data]);
       console.log("here", res.data);
-      setNewPlace(null);
+      setNewPlace({lat: 0, lng: 0});
     } catch (err) {
       console.log(err);
     }
