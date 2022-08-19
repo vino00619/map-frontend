@@ -39,7 +39,7 @@ function App() {
   const myStorage = window.localStorage;
   const [currentUser, setCurrentUser] = useState(null);
   const [pins, setPins] = useState([]);
-  const [newPlace, setNewPlace] = useState(null);
+  const [newPlace, setNewPlace] = useState({lat: 0, lng: 0}); //changed the default value
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [title, setTitle] = useState(null);
   const [desc, setDesc] = useState(null);
