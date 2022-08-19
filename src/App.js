@@ -84,7 +84,7 @@ function App() {
 
   const handleAddClick = (e) => {
     // console.log(e);
-    // console.log(e.lngLat);
+    console.log(e.lngLat);
     const { lng, lat } = e.lngLat;
     // console.log(lng, lat);
     setPins([
