@@ -3,6 +3,8 @@ import RoomIcon from "@mui/icons-material/Room";
 import { useState, useRef } from "react";
 import axios from "axios";
 import CancelIcon from '@mui/icons-material/Cancel';
+import { API_URL } from "./globalConstant.js";
+
 
 
 export default function Login({setShowLogin, myStorage, setCurrentUser}) {
@@ -19,7 +21,8 @@ export default function Login({setShowLogin, myStorage, setCurrentUser}) {
     };
 
     try {
-        const res = await axios.post("http://localhost:8800/api/users/login", user);
+        // const res = await axios.post("http://localhost:8800/api/users/login", user);
+        const res = await axios.post(`${API_URL}/api/users/login`, user);
         myStorage.setItem("user",user.username)
         // myStorage.setItem("user",res.data.user)
         setCurrentUser(res.data.username)

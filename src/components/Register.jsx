@@ -3,6 +3,8 @@ import RoomIcon from "@mui/icons-material/Room";
 import { useState, useRef } from "react";
 import axios from "axios";
 import CancelIcon from '@mui/icons-material/Cancel';
+import { API_URL } from "./globalConstant.js";
+
 
 
 export default function Register({setShowRegister}) {
@@ -22,7 +24,8 @@ export default function Register({setShowRegister}) {
     };
 
     try {
-        await axios.post("http://localhost:8800/api/users/register", newUser);
+        // await axios.post("http://localhost:8800/api/users/register", newUser);
+        await axios.post(`${API_URL}/api/users/register`, newUser);
         setError(false);
         setSuccess(true);
     } catch (err) {

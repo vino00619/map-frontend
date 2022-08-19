@@ -111,7 +111,8 @@ function App() {
     console.log("newpin:", newPin);
 
     try {
-      const res = await axios.post("http://localhost:8800/api/pins", newPin);
+      // const res = await axios.post("http://localhost:8800/api/pins", newPin);
+      const res = await axios.post(`${API_URL}/api/pins`, newPin);
       setPins([...pins, res.data]);
       // console.log("here", res.data);
       setNewPlace(null);
