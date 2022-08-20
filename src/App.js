@@ -114,7 +114,7 @@ function App() {
     try {
       // const res = await axios.post("http://localhost:8800/api/pins", newPin);
       const res = await axios.post(`${API_URL}/api/pins`, newPin);
-      setPins([...pins, res.data]);
+      setPins([...pins, res.data.message]);
       console.log("here", res.data);
       // setNewPlace({lat: 0, lng: 0});
     } catch (err) {
