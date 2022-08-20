@@ -110,6 +110,10 @@ function App() {
       long: newPlace.lng,
     };
     console.log("newpin:", newPin);
+    setTitle(null);
+    setDesc(null);
+    setRating(null);
+
 
     try {
       // const res = await axios.post("http://localhost:8800/api/pins", newPin);
