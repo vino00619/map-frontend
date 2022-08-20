@@ -110,9 +110,9 @@ function App() {
       long: newPlace.lng,
     };
     console.log("newpin:", newPin);
-    setTitle(null);
-    setDesc(null);
-    setRating(null);
+    // setTitle(null);
+    // setDesc(null);
+    // setRating(null);
 
 
     try {
@@ -120,7 +120,7 @@ function App() {
       const res = await axios.post(`${API_URL}/api/pins`, newPin);
       setPins([...pins, res.data.message]);
       console.log("here", res.data);
-      setNewPlace({lat: 0, lng: 0});
+      setNewPlace(null);
     } catch (err) {
       console.log(err);
     }
