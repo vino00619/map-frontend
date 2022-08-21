@@ -132,6 +132,7 @@ function App() {
   }
 
   const user = myStorage.getItem("user");
+  console.log(user);
 
   return (
     <div>
