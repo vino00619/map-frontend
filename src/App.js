@@ -127,11 +127,11 @@ function App() {
   };
 
   const handleLogout = () => {
-    myStorage.removeItem("user");
+    myStorage.removeItem(currentUser);
     setCurrentUser(null);
   }
 
-  const user = myStorage.getItem("user");
+  const user = myStorage.getItem(currentUser);
   console.log(user);
 
   return (
