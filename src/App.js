@@ -39,7 +39,7 @@ function App() {
   const myStorage = window.localStorage;
   const [currentUser, setCurrentUser] = useState(null);
   const [pins, setPins] = useState([]);
-  const [newPlace, setNewPlace] = useState({lat: 0, lng: 0}); //changed the default value
+  const [newPlace, setNewPlace] = useState(); //changed the default value
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [title, setTitle] = useState(null);
   const [desc, setDesc] = useState(null);
@@ -120,6 +120,7 @@ function App() {
       const res = await axios.post(`${API_URL}/api/pins`, newPin);
       setPins([...pins, res.data.message]);
       console.log("here", res.data);
+      // setNewPlace(null);
     } catch (err) {
       console.log(err);
     }
