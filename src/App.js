@@ -120,7 +120,6 @@ function App() {
       const res = await axios.post(`${API_URL}/api/pins`, newPin);
       setPins([...pins, res.data.message]);
       console.log("here", res.data);
-      setNewPlace(null);
     } catch (err) {
       console.log(err);
     }
@@ -149,7 +148,7 @@ function App() {
         mapStyle="mapbox://styles/mapbox/streets-v11"
         // {user ? onDblClick={handleAddClick}:onDblClick={null}}
         onDblClick={user? handleAddClick:""}
-        transition={9000}
+        transition={5000}
       >
         {pins.map((p, index) => (
           <div key={index}>
