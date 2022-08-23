@@ -64,6 +64,7 @@ function App() {
         console.log("res data:", res.data);
         //const arr_star = res.data.map((data) => data.rating);
         // console.log("b:", arr_star);
+        myStorage.removeItem("user");
       } catch (err) {
         console.log(err);
       }
